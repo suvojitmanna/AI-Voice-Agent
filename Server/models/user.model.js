@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    image:{
+        type:String,
+        default:""
+    },
     assistantName: {
         type: String,
         default: "shifra"

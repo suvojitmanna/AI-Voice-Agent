@@ -24,7 +24,7 @@ export const googleAuth = async (req, res) => {
       }
     );
 
-    const { name, email } = data;
+    const { name, email, picture } = data;
 
     let user = await User.findOne({ email });
 
@@ -32,7 +32,11 @@ export const googleAuth = async (req, res) => {
       user = await User.create({
         name,
         email,
+        image: picture,
       });
+    } else if (!user.image) {
+      user.image = picture;
+      await user.save();
     }
 
     const jwtToken = genToken(user._id);

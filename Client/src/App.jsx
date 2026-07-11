@@ -10,6 +10,7 @@ import Builder from "./pages/Builder";
 import Billing from "./pages/Billing";
 import Layout from "./components/Layout";
 import PublicRoute from "./components/PublicRoute";
+import toast, { Toaster } from "react-hot-toast";
 
 export const ServerUrl = import.meta.env.VITE_API_URL;
 
@@ -32,36 +33,39 @@ const App = () => {
         setLoading(false);
       }
     };
-console.log("App user:", user);
+    console.log("App user:", user);
     fetchMe();
   }, []);
 
   return (
-    <Routes>
-      <Route
-        path="/login"
-        element={
-          <PublicRoute user={user} loading={loading}>
-            <Login setUser={setUser} />
-          </PublicRoute>
-        }
-      />
+    <>
+      <Toaster position="top-right" />
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            <PublicRoute user={user} loading={loading}>
+              <Login setUser={setUser} />
+            </PublicRoute>
+          }
+        />
 
-      <Route element={<ProtectedRoute user={user} loading={loading} />}>
-        <Route element={<Layout user={user} setUser={setUser} />}>
-          <Route path="/" element={<Home user={user} />} />
+        <Route element={<ProtectedRoute user={user} loading={loading} />}>
+          <Route element={<Layout user={user} setUser={setUser} />}>
+            <Route path="/" element={<Home user={user} />} />
 
-          <Route
-            path="/builder"
-            element={<Builder user={user} setUser={setUser} />}
-          />
+            <Route
+              path="/builder"
+              element={<Builder user={user} setUser={setUser} />}
+            />
 
-          <Route path="/billing" element={<Billing user={user} />} />
+            <Route path="/billing" element={<Billing user={user} />} />
+          </Route>
         </Route>
-      </Route>
 
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
 };
 
