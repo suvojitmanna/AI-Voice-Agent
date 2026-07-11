@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
     res.json("✅ Server is running");
 });
 
-app.use("/api/auth", userRouter);
+app.use("/api/user", userRouter);
 
 const PORT = process.env.PORT || 8000;
 

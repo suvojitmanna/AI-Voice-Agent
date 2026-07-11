@@ -1,9 +1,11 @@
-import React from 'react'
+const Home = ({ user }) => {
+  console.log("Home User:", user);
 
-const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="text-4xl text-green-500">
+      {user?.name}
+    </div>
+  );
+};
 
-export default Home
+export default Home;

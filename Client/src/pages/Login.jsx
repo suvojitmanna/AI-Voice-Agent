@@ -16,7 +16,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const [darkMode, setDarkMode] = useState(true);
   const [isCreating, setIsCreating] = useState(false);
 
@@ -36,11 +36,12 @@ const Login = () => {
       try {
         setIsCreating(true);
 
-        const { data } = await axiosInstance.post("/auth/google", {
+        const { data } = await axiosInstance.post("/user/google", {
           token: tokenResponse.access_token,
         });
         console.log(data);
         toast.success(data.message);
+        setUser(data.user);
         navigate("/");
       } catch (error) {
         toast.error(error.response?.data?.message || "Login Failed");

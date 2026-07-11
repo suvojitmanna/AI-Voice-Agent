@@ -1,8 +1,6 @@
-import { OAuth2Client } from "google-auth-library";
+
 import User from "../models/user.model.js";
 import { genToken } from "../utils/genToken.js";
-
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 //login
 import axios from "axios";
@@ -17,8 +15,6 @@ export const googleAuth = async (req, res) => {
         message: "Google access token is required",
       });
     }
-
-    // Get user information from Google using the access token
     const { data } = await axios.get(
       "https://www.googleapis.com/oauth2/v3/userinfo",
       {
@@ -63,25 +59,40 @@ export const googleAuth = async (req, res) => {
   }
 };
 
+// getCurrentUser
+export const getCurrentUser = async (req, res) => {
+  try {
+    return res.status(200).json({
+      success: true,
+      user: req.user,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 //logout
 export const logout = async (req, res) => {
-    try {
-        res.clearCookie("token", {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-        });
+  try {
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    });
 
-        return res.status(200).json({
-            success: true,
-            message: "Logged out successfully",
-        });
-    } catch (error) {
-        console.error(error);
+    return res.status(200).json({
+      success: true,
+      message: "Logged out successfully",
+    });
+  } catch (error) {
+    console.error(error);
 
-        return res.status(500).json({
-            success: false,
-            message: error.message,
-        });
-    }
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
 };
