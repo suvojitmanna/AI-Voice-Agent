@@ -54,10 +54,10 @@ const Footer = () => {
             <div>
               <div className="flex items-center gap-2 font-black text-2xl tracking-tight text-[#081028] dark:text-gray-100">
                 <span className="h-8 w-8 rounded-xl bg-gradient-to-br from-purple-500 to-emerald-500 flex items-center justify-center text-white text-base">
-                  V
+                  S
                 </span>
                 <span>
-                  Virtual
+                  Shifra
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-emerald-500">
                     AI
                   </span>
