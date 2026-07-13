@@ -13,6 +13,7 @@ import PublicRoute from "./components/PublicRoute";
 import toast, { Toaster } from "react-hot-toast";
 
 export const ServerUrl = import.meta.env.VITE_API_URL;
+export const ClientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const App = () => {
   const [user, setUser] = useState(null);

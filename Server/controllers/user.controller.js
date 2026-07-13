@@ -63,21 +63,6 @@ export const googleAuth = async (req, res) => {
   }
 };
 
-// getCurrentUser
-export const getCurrentUser = async (req, res) => {
-  try {
-    return res.status(200).json({
-      success: true,
-      user: req.user,
-    });
-  } catch (error) {
-    return res.status(500).json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
-
 //logout
 export const logout = async (req, res) => {
   try {
@@ -94,6 +79,86 @@ export const logout = async (req, res) => {
   } catch (error) {
     console.error(error);
 
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// Get Current User
+export const getCurrentUser = async (req, res) => {
+  try {
+    return res.status(200).json({
+      success: true,
+      user: req.user,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// Save Assistant
+export const saveAssistant = async (req, res) => {
+  try {
+    const {
+      assistantName,
+      businessName,
+      businessType,
+      businessDescription,
+      tone,
+      theme,
+      geminiApiKey,
+      pages,
+    } = req.body;
+
+    const user = await User.findById(req.user._id);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+    if (
+      !assistantName ||
+      !businessName ||
+      !businessType ||
+      !businessDescription ||
+      !tone ||
+      !theme
+    ) {
+      return res.status(400).json({
+        success: false,
+        message: "All required fields are mandatory",
+      });
+    }
+
+    user.assistantName = assistantName;
+    user.businessName = businessName
+    user.businessType = businessType
+    user.businessDescription = businessDescription
+    user.tone = tone
+    user.theme = theme.charAt(0).toUpperCase() + theme.slice(1);
+
+
+    if (geminiApiKey) {
+      user.geminiApiKey = geminiApiKey
+    }
+    user.geminiStatus = "Active"
+    user.pages = pages || []
+    user.isSetupComplete = true
+    await user.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Assistant saved successfully",
+      user: user,
+    });
+  } catch (error) {
     return res.status(500).json({
       success: false,
       message: error.message,
