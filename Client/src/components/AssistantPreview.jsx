@@ -204,7 +204,7 @@ const AssistantPreview = () => {
             )}
             <button
               onClick={() => setIsListening(!isListening)}
-              className={`relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${current.button} ${current.micGlow} flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95`}
+              className={`relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${current.button} ${current.micGlow} flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 animate-bounce`}
             >
               <motion.div
                 animate={isListening ? { scale: [1, 1.08, 1] } : { scale: 1 }}

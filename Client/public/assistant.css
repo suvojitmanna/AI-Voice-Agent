@@ -409,6 +409,16 @@
   border: none;
   padding: 0;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: shifra-bounce 1.2s infinite;
+}
+@keyframes shifra-bounce {
+  0%,
+  100% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
 }
 .shifra-mic-trigger:hover {
   transform: scale(1.05);
@@ -430,7 +440,7 @@
 .launcher-icon {
   height: 55px;
   width: 55px;
-  object-fit: contain; /* Ensures the logo fits cleanly without distortion */
+  object-fit: contain;
   transition: transform 0.4s ease;
 }
 
@@ -469,7 +479,7 @@
   box-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
 }
 .theme-dark .shifra-idle-tag {
-  color: #ffffff;
+  color: #7c3aed;
 }
 
 /* --- LIGHT DESIGN INTERFACE --- */
@@ -508,7 +518,7 @@
   box-shadow: 0 0 50px rgba(59, 130, 246, 0.3);
 }
 .theme-light .shifra-idle-tag {
-  color: #081028;
+  color: #1c65d9;
 }
 
 /* --- GLASS DESIGN INTERFACE --- */
@@ -549,7 +559,7 @@
   box-shadow: 0 0 50px rgba(34, 211, 238, 0.3);
 }
 .theme-glass .shifra-idle-tag {
-  color: #ffffff;
+  color: #a855f7;
 }
 
 /* --- NEON DESIGN INTERFACE --- */
@@ -588,5 +598,5 @@
   box-shadow: 0 0 50px rgba(16, 185, 129, 0.4);
 }
 .theme-neon .shifra-idle-tag {
-  color: #f0fdf4;
+  color: #07d753;
 }

@@ -3,15 +3,12 @@
     const userId = script?.dataset?.userId;
     const clientUrl = script?.dataset?.clientUrl;
 
-    // Inject CSS File Link from development/production endpoint
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "http://localhost:5173/assistant.css";
     document.head.appendChild(link);
 
-    // Dynamic keyframe styles for toggle actions injected programmatically
     const style = document.createElement("style");
-
     style.textContent = `
         .shifra-root-wrapper {
             position: fixed;
@@ -62,6 +59,13 @@
     `;
     document.head.appendChild(style);
 
+    function escapeHTML(str) {
+        if (!str) return '';
+        return str.replace(/[&<>'"]/g,
+            tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+        );
+    }
+
     const waveBars = [
         { minHeight: 12, maxHeight: 28 },
         { minHeight: 16, maxHeight: 42 },
@@ -73,8 +77,10 @@
 
     let state = {
         theme: "dark",
+        title: "Shifra AI",
+        subtitle: "Your smart voice assistant.<br/>Ask anything about your website.",
         isListening: false,
-        isOpen: false
+        isOpen: false,
     };
 
     const container = document.createElement("div");
@@ -85,9 +91,7 @@
         container.innerHTML = `
             <div class="shifra-card-wrapper ${state.isOpen ? 'is-visible' : ''}">
                 <div id="shifra-card" class="shifra-card theme-${state.theme}">
-                    
                     <div class="shifra-overlay"></div>
-
                     <div class="shifra-selectors-panel">
                         ${["dark", "light", "glass", "neon"].map(t => `
                             <button 
@@ -97,28 +101,20 @@
                             ></button>
                         `).join('')}
                     </div>
-
                     <div class="shifra-content">
-                        
                         <div class="shifra-orb-viewport">
                             <div class="shifra-orb-blur-glow"></div>
                             <div id="shifra-fluid-orb" class="shifra-fluid-orb ${state.isListening ? 'shifra-orb-active' : ''}"></div>
                         </div>
-
                         <div class="shifra-text-center">
-                            <h2 class="shifra-title">Hello! I'm Shifra AI</h2>
-                            <p class="shifra-subtitle">
-                                Your smart voice assistant. <br /> Ask anything about your website.
-                            </p>
-
+                            <h2 class="shifra-title">Hello! I'm ${state.title}</h2>
+                            <p class="shifra-subtitle">${state.subtitle}</p>
                             <div class="shifra-visualizer-container">
                                 ${state.isListening ? `
                                     <div class="shifra-listening-wrapper">
                                         <p class="shifra-status-tag">Listening...</p>
                                         <div class="shifra-wave-eq-bars">
-                                            ${waveBars.map(() => `
-                                                <span class="shifra-eq-bar"></span>
-                                            `).join('')}
+                                            ${waveBars.map(() => `<span class="shifra-eq-bar"></span>`).join('')}
                                         </div>
                                     </div>
                                 ` : `
@@ -126,7 +122,6 @@
                                 `}
                             </div>
                         </div>
-
                         <div class="shifra-mic-dock">
                             <div id="shifra-mic-pulse" class="shifra-mic-pulse ${state.isListening ? 'shifra-pulse-active' : ''}"></div>
                             <button id="shifra-mic-toggle" class="shifra-mic-trigger" aria-label="Toggle Mic">
@@ -135,11 +130,9 @@
                                 </svg>
                             </button>
                         </div>
-
                     </div>
                 </div>
             </div>
-
             <div id="shifra-launcher" class="shifra-launcher-logo ${state.isOpen ? 'is-open' : ''}" role="button" aria-label="Toggle Shifra Assistant">
                 ${state.isOpen ? `
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
@@ -202,14 +195,44 @@
     }
 
     document.addEventListener("click", (e) => {
-        if (state.isOpen) {
-            if (!container.contains(e.target)) {
-                state.isOpen = false;
-                clearInterval(waveInterval);
-                render();
-            }
+        if (state.isOpen && !container.contains(e.target)) {
+            state.isOpen = false;
+            clearInterval(waveInterval);
+            render();
         }
     });
 
+    let assistantConfig = null;
+    const loadAssistant = async () => {
+        try {
+            const res = await fetch(`http://localhost:8000/api/assistant/config/${userId}`);
+            if (!res.ok) throw new Error("Failed to load assistant");
+
+            const data = await res.json();
+
+            if (data.user) {
+                assistantConfig = data.user;
+                applyConfig();
+            }
+        } catch (error) {
+            console.error("Load Assistant Error:", error);
+        }
+    };
+
+    const applyConfig = () => {
+        if (!assistantConfig) return;
+
+        const incomingTheme = (assistantConfig.theme || "dark").toLowerCase();
+
+        state.theme = ["dark", "light", "glass", "neon"].includes(incomingTheme) ? incomingTheme : "dark";
+        state.title = escapeHTML(assistantConfig.assistantName || "Shifra AI");
+
+        const businessName = escapeHTML(assistantConfig.businessName || "our website");
+        state.subtitle = `Welcome to ${businessName}.<br/>Ask anything about your website.`;
+
+        render();
+    };
+    // Initialize execution flow
     render();
+    loadAssistant();
 })();
