@@ -109,13 +109,12 @@
 /* RESPONSIVE CARD CONSTRAINTS */
 .shifra-card {
   position: relative;
-  /* Base mobile rules prevent exceeding the screen */
   width: calc(100vw - 40px);
   max-width: 290px;
   height: 460px;
   max-height: calc(100vh - 120px);
 
-  border-radius: 32px;
+  border-radius: 42px;
   overflow: hidden;
   transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
@@ -147,8 +146,9 @@
   height: 100%;
   padding: 1.75rem 1.5rem 1.5rem;
   box-sizing: border-box;
-  overflow-y: auto; /* Fallback for very small screens */
+  overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 @media (min-width: 640px) {
   .shifra-content {
@@ -416,9 +416,6 @@
   box-sizing: border-box;
   padding-right: 4px;
 }
-.shifra-ai-text {
-  color: #0b3486;
-}
 
 .shifra-mic-dock {
   position: relative;
@@ -520,6 +517,13 @@
   color: #7c3aed;
 }
 
+.theme-dark .shifra-user-text {
+  color: #22d3eeaa;
+}
+
+.theme-dark .shifra-ai-text {
+  color: #ffffff88;
+}
 .theme-light {
   background: linear-gradient(to bottom right, #ffffff, #f8fafc, #f1f5f9);
   border: 1px solid #dbeafe;
@@ -556,6 +560,14 @@
 }
 .theme-light .shifra-idle-tag {
   color: #1c65d9;
+}
+
+.theme-light .shifra-user-text {
+  color: #4dc6d8;
+}
+
+.theme-light .shifra-ai-text {
+  color: #0821e08c;
 }
 
 .theme-glass {
@@ -598,6 +610,14 @@
   color: #a855f7;
 }
 
+.theme-glass .shifra-user-text {
+  color: #a855f7;
+}
+
+.theme-glass .shifra-ai-text {
+  color: #e016d38c;
+}
+
 .theme-neon {
   background-color: #03120d;
   border: 1px solid rgba(16, 185, 129, 0.2);
@@ -634,6 +654,14 @@
 }
 .theme-neon .shifra-idle-tag {
   color: #07d753;
+}
+
+.theme-neon .shifra-user-text {
+  color: #1ca158;
+}
+
+.theme-neon .shifra-ai-text {
+  color: #16d9e08c;
 }
 
 /* LANDSCAPE MOBILE & VERY SHORT SCREENS */
