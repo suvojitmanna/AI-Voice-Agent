@@ -450,41 +450,54 @@ const Builder = ({ user, setUser }) => {
                   <h3 className="text-lg font-semibold mb-6 tracking-wide text-gray-800 dark:text-gray-200">
                     Basic Information
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-5">
                     {[
                       {
                         val: assistantName,
                         set: setAssistantName,
-                        ph: "Assistant Name",
+                        label: "Assistant Name",
                       },
                       {
                         val: businessName,
                         set: setBusinessName,
-                        ph: "Business Name",
+                        label: "Business Name",
                       },
                       {
                         val: businessType,
                         set: setBusinessType,
-                        ph: "Business Type",
+                        label: "Business Type",
                       },
                     ].map((input, idx) => (
-                      <div key={idx} className="relative group">
+                      <div
+                        key={idx}
+                        className="relative group flex flex-col space-y-1.5"
+                      >
+                        <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 px-1">
+                          {input.label}
+                        </label>
                         <input
                           type="text"
                           onChange={(e) => input.set(e.target.value)}
                           value={input.val}
-                          placeholder={input.ph}
+                          placeholder={`Enter ${input.label.toLowerCase()}...`}
                           className="w-full border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-950/40 dark:text-gray-100 rounded-2xl px-5 py-3.5 outline-none focus:border-purple-500/80 dark:focus:border-purple-500/80 focus:ring-4 focus:ring-purple-500/10 placeholder-gray-400 dark:placeholder-gray-500 font-medium transition-all duration-300"
                         />
                       </div>
                     ))}
-                    <textarea
-                      rows={4}
-                      onChange={(e) => setBusinessDescription(e.target.value)}
-                      value={businessDescription}
-                      placeholder="Business Description"
-                      className="w-full border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-950/40 dark:text-gray-100 rounded-2xl px-5 py-3.5 outline-none focus:border-purple-500/80 dark:focus:border-purple-500/80 focus:ring-4 focus:ring-purple-500/10 resize-none placeholder-gray-400 dark:placeholder-gray-500 font-medium transition-all duration-300"
-                    />
+
+                    {/* Textarea wrapped similarly to include a heading */}
+                    <div className="relative group flex flex-col space-y-1.5">
+                      <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 px-1">
+                        Business Description
+                      </label>
+                      <textarea
+                        rows={4}
+                        onChange={(e) => setBusinessDescription(e.target.value)}
+                        value={businessDescription}
+                        placeholder="Enter business description..."
+                        className="w-full border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-950/40 dark:text-gray-100 rounded-2xl px-5 py-3.5 outline-none focus:border-purple-500/80 dark:focus:border-purple-500/80 focus:ring-4 focus:ring-purple-500/10 resize-none placeholder-gray-400 dark:placeholder-gray-500 font-medium transition-all duration-300"
+                      />
+                    </div>
                   </div>
                 </motion.div>
 
