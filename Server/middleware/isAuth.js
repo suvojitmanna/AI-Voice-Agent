@@ -13,14 +13,19 @@ export const isAuth = async (req, res, next) => {
         }
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
         const user = await User.findById(decoded.id).select("-password");
+
         if (!user) {
             return res.status(404).json({
                 success: false,
                 message: "User not found.",
             });
         }
+
         req.user = user;
+        req.userId = user._id;
+
         next();
     } catch (error) {
         return res.status(401).json({

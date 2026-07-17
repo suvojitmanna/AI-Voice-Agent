@@ -5,6 +5,7 @@ import cors from "cors";
 import connectDb from "./configs/Db.js";
 import userRouter from "./routes/user.route.js";
 import assistantRouter from "./routes/assistant.route.js";
+import billingRouter from "./routes/billing.route.js";
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/user",privateCors, userRouter);
 app.use("/api/assistant",publicCors, assistantRouter);
+app.use("/api/billing",privateCors,billingRouter)
 
 const PORT = process.env.PORT || 8000;
 
