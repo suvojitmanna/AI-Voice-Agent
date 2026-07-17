@@ -317,10 +317,19 @@
 
                     if (data.action === "navigation") {
                         speak(data.response);
+                        console.log("Navigation Action:", data.action);
+                        console.log("Navigation Path:", data.path);
 
-                        setTimeout(() => {
-                            window.location.href = data.path;
-                        }, 1500);
+                        if (data.action === "navigation") {
+                            console.log("Full response:", data);
+                            console.log("Path:", data.path);
+
+                            speak(data.response);
+
+                            setTimeout(() => {
+                                window.location.assign(data.path);
+                            }, 1500);
+                        }
                     } else {
                         speak(data.aiResponse);
                     }

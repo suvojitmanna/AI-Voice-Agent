@@ -56,7 +56,7 @@ const Builder = ({ user, setUser }) => {
     user?.businessDescription || "",
   );
   const [theme, setTheme] = useState(user?.theme || "dark");
-  const [tones, setTones] = useState(user?.tones || "friendly");
+  const [tones, setTones] = useState(user?.tone || "friendly");
   const [geminiApiKey, setGeminiApiKey] = useState(user?.geminiApiKey || "");
   const [pages, setPages] = useState(user?.pages || []);
   const [pageName, setPageName] = useState("");
@@ -71,7 +71,11 @@ const Builder = ({ user, setUser }) => {
 
   const isPageFormIncomplete = !pageName.trim() || !pagePath.trim();
   const isMainFormIncomplete =
-    !assistantName.trim() || !businessName.trim() || !geminiApiKey.trim();
+    !assistantName.trim() ||
+    !businessName.trim() ||
+    !geminiApiKey.trim() ||
+    !businessType.trim() ||
+    !businessDescription.trim();
   const isSaveDisabled = isMainFormIncomplete || loading;
 
   const addPage = () => {
@@ -82,9 +86,15 @@ const Builder = ({ user, setUser }) => {
 
     const newPage = {
       name: pageName.trim(),
-      path: pagePath.trim(),
-      keyword: pageKeyWords ? pageKeyWords.split(",").map((k) => k.trim()) : [],
+      path: pagePath,
+      keywords: pageKeyWords
+        ? pageKeyWords
+            .split(",")
+            .map((k) => k.trim())
+            .filter(Boolean)
+        : [],
     };
+    console.log(pages);
 
     setPages([...pages, newPage]);
     setPageName("");
@@ -149,7 +159,7 @@ const Builder = ({ user, setUser }) => {
       )
     : 0;
 
-  const embedCode = `<script src="${ClientUrl}/assistant.js" data-user-id="${user?._id}"></script>`;
+  const embedCode = `<script src="${ClientUrl}/assistant.js" data-user-id="${user?._id}" data-client-url="${ClientUrl}"> </script>`;
 
   const AssistantSkeleton = () => {
     return (
@@ -297,24 +307,55 @@ const Builder = ({ user, setUser }) => {
 
               {/* Script Instructions */}
               <div className="mt-7">
-                <div className="mt-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 p-4">
-                  <p className="text-sm font-semibold text-amber-900 dark:text-amber-400">
-                    Where to paste this script?
-                  </p>
-                  <p className="text-sm text-amber-700 dark:text-amber-500 mt-2 leading-6">
-                    Paste this script before the closing{" "}
-                    <span className="font-semibold">{"</body>"}</span> tag of
-                    your website HTML file. <br /> <br />
-                    Example:
-                  </p>
+                {/* Instructions Box */}
+                <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/50 dark:bg-amber-950/30">
+                  <h3 className="text-sm font-semibold text-amber-900 dark:text-amber-400">
+                    Installation Instructions
+                  </h3>
+
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-amber-700 dark:text-amber-500">
+                    <li>
+                      Copy the script below and paste it before the closing{" "}
+                      <span className="font-semibold">&lt;/body&gt;</span> tag
+                      of your website.
+                    </li>
+
+                    <li>
+                      <span className="font-semibold">src</span> – URL of the
+                      assistant JavaScript file. This loads the AI widget on
+                      your website.
+                    </li>
+
+                    <li>
+                      <span className="font-semibold">data-user-id</span> – Your
+                      unique User ID. It identifies your assistant and loads
+                      your saved configuration.
+                    </li>
+
+                    <li>
+                      <span className="font-semibold">data-client-url</span> –
+                      Your frontend application URL. It is used by the widget to
+                      communicate with your AI service.
+                    </li>
+
+                    <li>
+                      Do not modify these values unless your deployment URL or
+                      User ID changes.
+                    </li>
+                  </ul>
                 </div>
 
-                <pre className="mt-3 bg-[#0b1020] text-emerald-400 rounded-xl p-3 text-xs font-mono overflow-x-auto">
+                {/* Code Preview */}
+                <pre className="mt-4 overflow-x-auto rounded-xl bg-[#0b1020] p-4 font-mono text-xs text-emerald-400 scroll-width-none">
                   {`<body>
-        
-  Your Website Content
 
-  <script src="${ClientUrl}/assistant.js" data-user-id="${user?._id}"></script>
+  <!-- Your Website Content -->
+
+  <script
+    src="${ClientUrl}/assistant.js"
+    data-user-id="${user?._id}"
+    data-client-url="${ClientUrl}">
+  </script>
 
 </body>`}
                 </pre>
@@ -808,11 +849,11 @@ const Builder = ({ user, setUser }) => {
                             <span className="text-xs font-mono text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded-md ml-3">
                               {page.path}
                             </span>
-                            {page.keyword?.length > 0 && (
+                            {page.keywords?.length > 0 && (
                               <p className="text-xs text-gray-400 dark:text-gray-500 font-medium mt-1">
                                 Keywords:{" "}
                                 <span className="font-mono text-gray-500 dark:text-gray-400">
-                                  {page.keyword.join(", ")}
+                                  {page.keywords.join(", ")}
                                 </span>
                               </p>
                             )}

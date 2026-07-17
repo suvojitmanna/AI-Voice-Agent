@@ -56,11 +56,16 @@ export const askAssistant = async (req, res) => {
         }
 
         if (wantNavigation) {
-            const matchedPage = user.pages.find((page) =>
-                page.keywords.some((keyword) =>
-                    cleanMessage.includes(keyword.toLowerCase())
-                )
-            );
+            const matchedPage = user.pages.find((page) => {
+                const pageName = page.name.toLowerCase();
+
+                return (
+                    cleanMessage.includes(pageName) ||
+                    page.keywords.some((keyword) =>
+                        cleanMessage.includes(keyword.toLowerCase())
+                    )
+                );
+            });
 
             if (matchedPage) {
                 if (currentPath === matchedPage.path) {
@@ -112,11 +117,11 @@ export const askAssistant = async (req, res) => {
         });
 
     } catch (error) {
-    console.error("Assistant AI Error:", error);
+        console.error("Assistant AI Error:", error);
 
-    return res.status(500).json({
-        success: false,
-        message: error.message
-    });
-}
+        return res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
 };

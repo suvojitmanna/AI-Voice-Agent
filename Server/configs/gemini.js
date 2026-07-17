@@ -14,7 +14,7 @@ export const generateGeminiResponse = async ({
         throw new Error("Gemini API key missing");
     }
 
-    const MAX_RETRIES = 5;
+    const MAX_RETRIES = 2;
 
     for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
         try {
