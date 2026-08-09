@@ -1,229 +1,600 @@
-<div align="center">
-
-# 🎙️ Shifra AI
-### Modern AI Voice Assistant Builder Platform
-
-Build, customize, and deploy your own AI-powered voice assistant for any website in minutes.
-
 <p align="center">
-  <img width="1891" height="911" alt="image" src="https://github.com/user-attachments/assets/7e9f4a90-11c0-4651-a8ac-b6839c31f0f2"width="120" alt="Shifra AI"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,50:6366F1,100:06B6D4&height=220&section=header&text=Shifra%20AI&fontSize=55&fontColor=ffffff&animation=fadeIn&desc=AI%20Voice%20Agent%20Builder%20Platform&descAlignY=75&descSize=20" />
 </p>
 
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
-![NodeJS](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb)
-![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google)
-![Razorpay](https://img.shields.io/badge/Razorpay-Payment-0C74FF?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?color=8B5CF6&size=26&center=true&vCenter=true&width=850&lines=Build+Your+Own+AI+Voice+Agent;Powered+by+Google+Gemini;Real-Time+Voice+Conversations;MERN+Stack+AI+Platform;Website+Navigation+with+Voice;Deploy+AI+Agents+with+One+Script" />
+</p>
 
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Voice%20Agent-8B5CF6?style=for-the-badge&logo=google-gemini&logoColor=white" alt="AI Voice Agent" />
+  <img src="https://img.shields.io/badge/MERN-Stack-00D8FF?style=for-the-badge&logo=mongodb&logoColor=white" alt="MERN Stack" />
+  <img src="https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" />
+  <img src="https://img.shields.io/badge/Razorpay-Payments-3395FF?style=for-the-badge&logo=razorpay&logoColor=white" alt="Razorpay Payments" />
+</p>
+
+<p align="center">
+  <strong>Build. Customize. Deploy. Your AI Voice Agent.</strong>
+</p>
+
+<p align="center">
+  A modern AI Voice Agent Builder Platform that allows businesses to create,
+  customize and deploy intelligent voice assistants on any website.
+</p>
+
+<p align="center">
+  <a href="https://your-live-demo.com">🌐 Live Demo</a>
+  &nbsp; • &nbsp;
+  <a href="#-features">✨ Features</a>
+  &nbsp; • &nbsp;
+  <a href="#-architecture">🏗 Architecture</a>
+  &nbsp; • &nbsp;
+  <a href="#-installation">⚡ Installation</a>
+</p>
+
+# 📸 Screenshots & Preview
+<img width="1919" height="912" alt="Screenshot 2026-08-09 162131" src="https://github.com/user-attachments/assets/6ad0e608-217a-4c7f-a642-7baab126c189" />
+
+## 🧠 What is Shifra AI?
+
+**Shifra AI** is a SaaS-style **AI Voice Agent Builder** designed for businesses that want to add conversational AI to their websites without building an AI assistant from scratch.
+
+With Shifra AI, a business can:
+
+```text
+Create Assistant
+      ↓
+Customize Personality
+      ↓
+Configure Website Knowledge
+      ↓
+Configure Voice
+      ↓
+Configure Navigation
+      ↓
+Generate Embed Script
+      ↓
+Paste Script Into Website
+      ↓
+🎙️ AI Voice Agent Goes Live
+```
+
+The goal is simple:
+
+> **Turn any website into an intelligent, voice-enabled experience.**
+
+---
+<img width="1914" height="914" alt="Screenshot 2026-08-09 162649" src="https://github.com/user-attachments/assets/c6b49166-6b86-4d57-b9fc-0358eecfab5f" />
+<img width="1910" height="906" alt="Screenshot 2026-08-09 162717" src="https://github.com/user-attachments/assets/b786fd1e-01c3-45d0-9a58-93ee0287feb0" />
+
+
+## 🚀 Why Shifra AI?
+
+Traditional websites make users:
+
+```text
+Search → Click → Read → Search Again → Navigate
+```
+
+Shifra AI changes that experience:
+
+```text
+User
+  ↓
+🎙️ "Open pricing"
+  ↓
+AI understands the request
+  ↓
+AI responds naturally
+  ↓
+Website navigates automatically
+```
+
+### Businesses can use Shifra AI for:
+
+* 🛍️ E-commerce websites
+* 🍔 Food delivery platforms
+* 🏨 Hotels
+* 🏥 Healthcare websites
+* 🎓 Education platforms
+* 💼 SaaS products
+* 🏢 Business websites
+* 🛒 Online stores
+* 📞 Customer support
+* 📚 Knowledge-based websites
 
 ---
 
-# ✨ Overview
+## ✨ Core Features
 
-Shifra AI is a **production-ready AI Voice Assistant Builder** that allows businesses to create, customize, and deploy intelligent voice assistants directly on their websites.
+### 🤖 AI Voice Agent
 
-Unlike a traditional chatbot, Shifra AI provides:
-
-- 🎤 Voice Conversations
-- 🤖 Google Gemini AI
-- 🌐 Website Navigation
-- 💳 Subscription Billing
-- 🎨 Theme Customization
-- ⚡ Script Embed Deployment
-- 🔒 Secure Authentication
-- 📊 Usage Analytics
-
-Businesses can simply paste one script into their website and instantly enable an AI-powered assistant.
+* Google Gemini AI integration
+* Natural language conversations
+* AI question answering
+* Website-aware responses
+* Context-aware conversations
+* Fast AI responses
+* Natural voice interaction
 
 ---
 
-# 🚀 Live Demo
+### 🎙️ Voice Interaction
 
-### 🌐 Website
+```text
+🎤 User speaks
+       ↓
+Speech Recognition
+       ↓
+Speech → Text
+       ↓
+AI Processing
+       ↓
+Google Gemini
+       ↓
+AI Response
+       ↓
+Text → Speech
+       ↓
+🔊 User hears response
+```
 
-https://your-live-demo.com
+**Voice capabilities**
 
-### 🎥 Demo Video
-
-Coming Soon...
-
----
-
-# 📸 Screenshots
-
-<img width="1885" height="912" alt="image" src="https://github.com/user-attachments/assets/98b16d9a-aa12-4f96-ba06-d77224fef7e4" />
-<img width="1887" height="919" alt="image" src="https://github.com/user-attachments/assets/70ba8efa-0a9d-4416-9653-9e3f33be6029" />
-
----
-
-# ✨ Features
-
-## 🤖 AI Features
-
-- Google Gemini AI Integration
-- Human-like Voice Assistant
-- Speech Recognition
-- Speech Synthesis
-- AI Question Answering
-- Website Knowledge
-- Fast AI Responses
-- Natural Conversations
-
----
-
-## 🎙 Voice Features
-
-- Start/Stop Voice Recognition
-- Animated Voice Wave
-- AI Speaking Indicator
-- Listening Animation
-- Hands-Free Experience
-- Browser Speech API
+* 🎤 Speech recognition
+* 🔊 Speech synthesis
+* 🎙️ Hands-free conversations
+* 🌊 Animated voice waveform
+* 👂 Listening state
+* 🗣️ Speaking state
+* ⏹️ Start / stop voice control
+* ⚡ Real-time interaction
 
 ---
 
-## 🌐 Navigation
+## 🌐 Intelligent Website Navigation
 
-Users can simply say
+Shifra AI is not only a chatbot.
+The agent can interact with the website's navigation system.
 
-> Open Builder
+### Example
 
-> Open Billing
+```text
+User:
+"Open billing"
+        ↓
+Speech Recognition
+        ↓
+AI / Navigation Engine
+        ↓
+Keyword Matching
+        ↓
+/billing
+        ↓
+React Router
+        ↓
+Billing Page
+```
 
-> Go to Home
+### Supported navigation
 
-Assistant automatically navigates.
-
-Supports
-
-- Dynamic Routes
-- Custom Keywords
-- Website Navigation
-- Current Page Detection
-
----
-
-## 🎨 Builder Features
-
-- Assistant Name
-- Business Information
-- AI Personality
-- Theme Selection
-- Voice Customization
-- Navigation Pages
-- Keywords
-- Embed Script Generator
-
----
-
-## 🎨 UI
-
-- Premium Design
-- Glassmorphism
-- Responsive Layout
-- Smooth Animations
-- Modern Cards
-- Floating Assistant
-- Beautiful Dashboard
+* Dynamic routes
+* Custom keywords
+* Page detection
+* Route matching
+* Voice navigation
+* Context-aware navigation
 
 ---
 
-## 🔐 Authentication
+## 🎨 AI Agent Builder
 
-- JWT Authentication
-- HTTP Only Cookies
-- Protected Routes
-- Public Routes
-- Login Persistence
-- Secure Middleware
+Businesses can customize their assistant without changing the application code.
 
----
+### Configuration
 
-## 💳 Billing
-
-- Razorpay Integration
-- Pro Subscription
-- Payment Verification
-- Plan Management
-- Expiry Handling
-- Unlimited Requests
+| Configuration     | Description          |
+| ----------------- | -------------------- |
+| 🤖 Assistant Name | Custom AI name       |
+| 🏢 Business Info  | Business knowledge   |
+| 🧠 Personality    | AI behavior          |
+| 🎨 Theme          | Assistant appearance |
+| 🎙️ Voice          | Voice configuration  |
+| 🌐 Navigation     | Website routes       |
+| 🔑 Keywords       | Navigation triggers  |
+| 📜 Embed Script   | Website integration  |
 
 ---
 
-## ⚙ Backend
+## ⚡ One Script Deployment
 
-- REST APIs
-- MVC Architecture
-- JWT Middleware
-- MongoDB
-- Mongoose
-- Error Handling
-- Validation
+The biggest advantage of Shifra AI is simple deployment.
 
----
+A business receives an embed script:
 
-# 🛠 Tech Stack
+```html
+<script
+  src="[https://your-domain.com/shifra-agent.js](https://your-domain.com/shifra-agent.js)"
+  data-agent-id="YOUR_AGENT_ID">
+</script>
+```
 
-## Frontend
+Paste it into any website:
 
-- React
-- React Router
-- Axios
-- Tailwind CSS
-- React Hot Toast
+```text
+Website
+   │
+   ├── Existing Website
+   │
+   └── Shifra AI Script
+              │
+              ▼
+       🎙️ Voice Assistant
+```
 
-## Backend
-
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT
-
-## AI
-
-- Google Gemini API
-
-## Payment
-
-- Razorpay
-
-## Deployment
-
-- Vercel
-- Render
+No major frontend rewrite is required.
 
 ---
 
-# 📂 Project Structure
+## 💳 SaaS Billing
+
+Shifra AI includes subscription management using Razorpay.
+
+### Payment flow
+
+```text
+User
+ │
+ ▼
+Choose Plan
+ │
+ ▼
+Create Razorpay Order
+ │
+ ▼
+Razorpay Checkout
+ │
+ ▼
+Payment Completed
+ │
+ ▼
+Signature Verification
+ │
+ ▼
+Backend Validation
+ │
+ ▼
+Update Subscription
+ │
+ ▼
+🎉 Pro Activated
+```
+
+### Billing features
+
+* Razorpay integration
+* Pro subscription
+* Payment verification
+* Subscription status
+* Plan management
+* Expiry handling
+* Protected premium features
+
+---
+
+## 🔐 Secure Authentication
+
+```text
+Login / Register
+       ↓
+Credentials Validation
+       ↓
+JWT Generation
+       ↓
+HTTP-Only Cookie
+       ↓
+Authentication Middleware
+       ↓
+Protected API
+       ↓
+Dashboard
+```
+
+### Security features
+
+* JWT authentication
+* HTTP-only cookies
+* Protected routes
+* Public routes
+* Authentication middleware
+* Session persistence
+* Backend authorization
+
+---
+
+## 🏗️ Architecture
+
+### 🌐 High-Level System Architecture
+
+```mermaid
+flowchart TB
+    User["👤 Website User"]
+    Website["🌐 Business Website"]
+    Agent["🎙️ Shifra AI Voice Agent"]
+    Frontend["⚛️ React Client"]
+    Backend["🟢 Node.js + Express API"]
+    Auth["🔐 JWT Authentication"]
+    Gemini["🤖 Google Gemini AI"]
+    Razorpay["💳 Razorpay"]
+    Mongo["🍃 MongoDB"]
+
+    User --> Website
+    Website --> Agent
+    Agent --> Frontend
+    Frontend -->|REST API| Backend
+    Backend --> Auth
+    Backend --> Gemini
+    Backend --> Razorpay
+    Backend --> Mongo
+```
+
+---
+
+### 🧩 Complete AI Voice Architecture
+
+```mermaid
+flowchart LR
+    User["🎤 User"]
+    Speech["🗣️ Speech Recognition"]
+    Text["📝 Speech to Text"]
+    API["⚡ Express API"]
+    Prompt["🧠 AI Prompt Engine"]
+    Gemini["🤖 Google Gemini"]
+    Response["💬 AI Response"]
+    TTS["🔊 Speech Synthesis"]
+    User2["👤 User Hears Response"]
+
+    User --> Speech
+    Speech --> Text
+    Text --> API
+    API --> Prompt
+    Prompt --> Gemini
+    Gemini --> Response
+    Response --> TTS
+    TTS --> User2
+```
+
+---
+
+### ⚛️ Frontend Architecture
+
+```mermaid
+flowchart TD
+    UI["🎨 React UI"]
+    Pages["📄 Pages"]
+    Components["🧩 Components"]
+    Context["🧠 Context / State"]
+    Hooks["🪝 Custom Hooks"]
+    Axios["📡 Axios API Layer"]
+    Router["🧭 React Router"]
+    Backend["🟢 Express Backend"]
+
+    UI --> Pages
+    Pages --> Components
+    Components --> Context
+    Components --> Hooks
+    Context --> Axios
+    Pages --> Router
+    Axios --> Backend
+```
+
+---
+
+### ⚙️ Backend Architecture
+
+Shifra AI follows a clean **MVC-style backend architecture**.
+
+```mermaid
+flowchart TD
+    Client["⚛️ React Client"]
+    Routes["🛣️ Express Routes"]
+    Middleware["🔐 Auth Middleware"]
+    Controllers["🎮 Controllers"]
+    Services["⚙️ Business Logic"]
+    Models["📦 Mongoose Models"]
+    Mongo["🍃 MongoDB"]
+    Gemini["🤖 Gemini API"]
+    Razorpay["💳 Razorpay API"]
+
+    Client --> Routes
+    Routes --> Middleware
+    Middleware --> Controllers
+    Controllers --> Services
+    Services --> Models
+    Models --> Mongo
+    Services --> Gemini
+    Services --> Razorpay
+```
+
+---
+
+### 🧱 Backend Request Lifecycle
+
+```text
+HTTP Request
+     │
+     ▼
+Express Router
+     │
+     ▼
+Authentication Middleware
+     │
+     ▼
+Controller
+     │
+     ▼
+Business Logic
+     │
+     ├──────────────┐
+     ▼              ▼
+MongoDB          External APIs
+                    │
+             ┌─────┴─────┐
+             ▼           ▼
+          Gemini      Razorpay
+             │           │
+             └─────┬─────┘
+                   ▼
+             Controller
+                   │
+                   ▼
+             JSON Response
+```
+
+---
+
+### 🤖 AI Processing Architecture
+
+```mermaid
+flowchart TD
+    Voice["🎤 User Voice"]
+    STT["Speech Recognition"]
+    Query["📝 User Query"]
+    Context["🌐 Website Context"]
+    Config["⚙️ Agent Configuration"]
+    Prompt["🧠 Prompt Builder"]
+    Gemini["🤖 Google Gemini"]
+    Intent["🎯 Intent Detection"]
+    Navigation["🧭 Navigation Engine"]
+    Answer["💬 AI Answer"]
+    TTS["🔊 Speech Synthesis"]
+
+    Voice --> STT
+    STT --> Query
+    Query --> Prompt
+    Context --> Prompt
+    Config --> Prompt
+    Prompt --> Gemini
+    Gemini --> Intent
+    Intent --> Navigation
+    Intent --> Answer
+    Answer --> TTS
+    TTS --> Voice
+```
+
+---
+
+### 🗂️ Database Architecture
+
+```mermaid
+erDiagram
+    USER ||--o{ ASSISTANT : creates
+    USER ||--o{ SUBSCRIPTION : owns
+    ASSISTANT ||--o{ NAVIGATION : contains
+    ASSISTANT ||--o{ ANALYTICS : generates
+
+    USER {
+        ObjectId id
+        string name
+        string email
+        string password
+        string plan
+    }
+
+    ASSISTANT {
+        ObjectId id
+        ObjectId userId
+        string name
+        string personality
+        string theme
+        string voice
+        string businessInfo
+        string embedId
+    }
+
+    NAVIGATION {
+        ObjectId id
+        ObjectId assistantId
+        string route
+        string keyword
+    }
+
+    SUBSCRIPTION {
+        ObjectId id
+        ObjectId userId
+        string plan
+        string status
+        date startDate
+        date expiryDate
+    }
+
+    ANALYTICS {
+        ObjectId id
+        ObjectId assistantId
+        number requests
+        number conversations
+        number users
+    }
+```
+
+---
+
+### 📊 Platform Architecture
+
+```text
+                    SHIFRA AI PLATFORM
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+   👤 Businesses      🎙️ Voice Agent      🌐 Website
+        │                  │                  │
+        ▼                  ▼                  ▼
+   Dashboard          Gemini AI          Embed Script
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+                           ▼
+                    🟢 Express API
+                           │
+              ┌────────────┼────────────┐
+              ▼            ▼            ▼
+          🍃 MongoDB    💳 Razorpay   🔐 JWT
+```
+
+---
+
+## 📂 Project Structure
 
 ```text
 Shifra-AI/
 │
 ├── client/
-│   ├── public/
-│   ├── src/
 │   │
-│   ├── assets/
-│   ├── components/
-│   ├── context/
-│   ├── pages/
-│   ├── hooks/
-│   ├── utils/
-│   ├── App.jsx
-│   └── main.jsx
+│   ├── public/
+│   │
+│   └── src/
+│       ├── assets/
+│       ├── components/
+│       ├── context/
+│       ├── pages/
+│       ├── hooks/
+│       ├── utils/
+│       ├── services/
+│       ├── App.jsx
+│       └── main.jsx
 │
 ├── server/
+│   │
 │   ├── configs/
 │   ├── controllers/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
+│   ├── services/
 │   ├── utils/
-│   ├── server.js
-│   └── app.js
+│   ├── app.js
+│   └── server.js
 │
 ├── README.md
 └── package.json
@@ -231,267 +602,248 @@ Shifra-AI/
 
 ---
 
-# 🏗 System Architecture
+## 🛠️ Tech Stack
 
-```text
-                +----------------------+
-                |     React Client     |
-                +----------+-----------+
-                           |
-                           |
-                     Axios / REST
-                           |
-                           ▼
-                +----------------------+
-                |   Express Backend    |
-                +----------+-----------+
-                           |
-         +-----------------+------------------+
-         |                 |                  |
-         ▼                 ▼                  ▼
- Authentication      Google Gemini       Razorpay
-      JWT                AI API           Payments
-         |                 |                  |
-         +-----------------+------------------+
-                           |
-                           ▼
-                    MongoDB Database
-```
+<div align="center">
+
+### Frontend
+<img src="https://skillicons.dev/icons?i=react,tailwind,vite,js,html,css" alt="Frontend Tech Stack" />
+
+### Backend
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,mongoose" alt="Backend Tech Stack" />
+
+### AI & Services
+<img src="https://skillicons.dev/icons?i=googlecloud" alt="Google Cloud" />
+<br/>
+<img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" />
+<img src="https://img.shields.io/badge/Razorpay-Payments-3395FF?style=for-the-badge&logo=razorpay&logoColor=white" alt="Razorpay" />
+
+### Deployment
+<img src="https://skillicons.dev/icons?i=vercel,render" alt="Deployment Tech Stack" />
+
+</div>
 
 ---
 
-# 🎤 Voice Assistant Flow
+## 🧰 Development Stack
 
-```text
-User
-   │
-   ▼
-Speech Recognition
-   │
-   ▼
-Speech to Text
-   │
-   ▼
-Backend API
-   │
-   ▼
-Google Gemini
-   │
-   ▼
-AI Response
-   │
-   ▼
-Speech Synthesis
-   │
-   ▼
-User Hears Response
-```
+| Layer                  | Technology    |
+| ---------------------- | ------------- |
+| 🎨 Frontend            | React         |
+| 🧭 Routing             | React Router  |
+| 🎨 Styling             | Tailwind CSS  |
+| 📡 API                 | Axios         |
+| 🟢 Backend             | Node.js       |
+| 🚀 Framework           | Express.js    |
+| 🍃 Database            | MongoDB       |
+| 📦 ODM                 | Mongoose      |
+| 🔐 Authentication      | JWT           |
+| 🤖 AI                  | Google Gemini |
+| 💳 Payments            | Razorpay      |
+| ☁️ Frontend Deployment | Vercel        |
+| ☁️ Backend Deployment  | Render        |
 
 ---
 
-# 🌐 Navigation Flow
+## ⚡ Installation
 
-```text
-User
-
-↓
-
-"Open Billing"
-
-↓
-
-Speech Recognition
-
-↓
-
-Backend
-
-↓
-
-Match Keywords
-
-↓
-
-/billing
-
-↓
-
-Frontend Navigation
-```
-
----
-
-# 💳 Payment Flow
-
-```text
-User
-
-↓
-
-Select Plan
-
-↓
-
-Create Razorpay Order
-
-↓
-
-Payment
-
-↓
-
-Verify Signature
-
-↓
-
-Update User Plan
-
-↓
-
-Pro Activated
-```
-
----
-
-# 🔒 Authentication Flow
-
-```text
-Login
-
-↓
-
-JWT Token
-
-↓
-
-HTTP Cookie
-
-↓
-
-Middleware
-
-↓
-
-Protected Route
-
-↓
-
-Dashboard
-```
-
----
-
-# ⚡ Installation
-
-Clone
-
+### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/yourusername/shifra-ai.git
+git clone [https://github.com/yourusername/shifra-ai.git](https://github.com/yourusername/shifra-ai.git)
+cd shifra-ai
 ```
 
-Install Client
-
+### 2️⃣ Install Client
 ```bash
 cd client
-
 npm install
 ```
 
-Install Server
+### 3️⃣ Install Server
+```bash
+cd ../server
+npm install
+```
 
+### 4️⃣ Start Backend
 ```bash
 cd server
-
-npm install
+npm run dev
 ```
 
-Run
-
+### 5️⃣ Start Frontend
 ```bash
+cd client
 npm run dev
 ```
 
 ---
 
-# 🔑 Environment Variables
+## 🔑 Environment Variables
 
-## Client
-
+### Client
 ```env
 VITE_API_URL=
-
 VITE_CLIENT_URL=
-
 VITE_RAZORPAY_KEY=
 ```
 
----
-
-## Server
-
+### Server
 ```env
-PORT=
-
+PORT=5000
 MONGO_URI=
-
 JWT_SECRET=
-
 GEMINI_API_KEY=
-
 RAZORPAY_KEY_ID=
-
 RAZORPAY_KEY_SECRET=
-
 CLIENT_URL=
 ```
 
 ---
 
-# 🚀 Future Improvements
+## 🚀 Deployment Architecture
 
-- OpenAI Support
-- ElevenLabs Voice
-- Multi Language
-- Analytics Dashboard
-- Chat History
-- AI Memory
-- Team Workspace
-- Custom Avatar
-- Wake Word Detection
-- Mobile SDK
-
----
-
-# 🤝 Contributing
-
-Pull requests are welcome.
-
-For major changes, please open an issue first.
+```text
+                 🌍 Internet
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+          ▼                     ▼
+      ▲ Vercel                Render
+   React Frontend        Express Backend
+          │                     │
+          └──────────┬──────────┘
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+       MongoDB     Gemini    Razorpay
+```
 
 ---
 
-# ⭐ Support
+## 📈 Product Value
 
-If you like this project,
+Shifra AI is designed around three major goals:
 
-⭐ Star this repository
-
-🍴 Fork it
-
-💬 Share it
+*   **1. 🎙️ Better User Experience:** Users can interact with websites naturally using voice.
+*   **2. ⚡ Faster Navigation:** Users don't need to manually search through multiple pages.
+*   **3. 🧠 Intelligent Assistance:** Gemini-powered conversations allow businesses to provide AI-based assistance 24/7.
 
 ---
 
-# 📄 License
+## 🔮 Future Roadmap
 
-MIT License
+```text
+✅ AI Voice Agent
+✅ Gemini Integration
+✅ Website Navigation
+✅ Agent Builder
+✅ Razorpay Billing
+✅ Authentication
+✅ Embed Script
+
+        ↓
+
+🔜 OpenAI Support
+🔜 ElevenLabs Voice
+🔜 Multi-language Support
+🔜 AI Memory
+🔜 Conversation History
+🔜 Analytics Dashboard
+🔜 Team Workspace
+🔜 Custom AI Avatar
+🔜 Wake Word Detection
+🔜 Mobile SDK
+🔜 Voice Calling
+```
 
 ---
+
+## 🎯 Project Highlights
+
+```text
+┌─────────────────────────────────────────┐
+│             🎙️ SHIFRA AI                │
+├─────────────────────────────────────────┤
+│                                         │
+│  🤖 AI Powered                          │
+│  🎤 Voice Enabled                       │
+│  🌐 Website Integrated                  │
+│  🧠 Gemini Powered                      │
+│  💳 SaaS Billing                        │
+│  🔐 Secure Authentication               │
+│  🎨 Fully Customizable                  │
+│  ⚡ Easy Embed Deployment                │
+│                                         │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+```bash
+git checkout -b feature/amazing-feature
+git add .
+git commit -m "Add amazing feature"
+git push origin feature/amazing-feature
+```
+
+Then open a Pull Request.
+
+---
+
+## ⭐ Support
+
+If you find **Shifra AI** useful:
+
+*   ⭐ Star the repository
+*   🍴 Fork the project
+*   📢 Share it with developers
+*   💬 Open an issue for suggestions
+
+<br/>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:6366F1,100:8B5CF6&height=180&section=footer&animation=fadeIn" />
+</p>
+
+<p align="center">
+
+  <img src="https://readme-typing-svg.herokuapp.com?color=8B5CF6&size=22&center=true&vCenter=true&width=700&lines=Thanks+for+visiting+Shifra+AI+🎙️;Give+Every+Website+a+Voice;Built+with+❤️+by+Suvojit+Manna" />
+
+</p>
+
+<p align="center">
+
+  <a href="https://github.com/suvojitmanna">
+    <img src="https://img.shields.io/badge/GitHub-Suvojit%20Manna-181717?style=for-the-badge&logo=github" />
+  </a>
+
+  <img src="https://img.shields.io/badge/Made%20with-❤️-EF4444?style=for-the-badge" />
+
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" />
+
+</p>
+
+<p align="center">
+  ⭐ <b>If you like Shifra AI, consider starring the repository.</b>
+</p>
+
+<p align="center">
+  <sub>© 2026 Shifra AI • Built with React, Node.js, MongoDB & Google Gemini</sub>
+</p>
+
 
 <div align="center">
 
-### Made with ❤️ by Suvojit Manna
+### 🎙️ Shifra AI
+**Give every website a voice.**
 
-**If you found this project helpful, don't forget to ⭐ the repository.**
+Built with ❤️ using the **MERN Stack + Google Gemini**
+
+⭐ **Star the repository if you like the project.**
 
 </div>
